@@ -1,7 +1,6 @@
 package Console;
 
 import calculator.*;
-import calculator.Formula;
 
 import java.util.ArrayList;
 import java.util.List;
