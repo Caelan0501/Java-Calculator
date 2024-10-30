@@ -9,6 +9,19 @@ public class Arithmetic
 {
 	private record returnValue(double result, List<String> subHistory) { }
 
+	public static boolean IsValid(String equation)
+	{
+		try
+		{
+			Token.ParseEquation(equation);
+		}
+		catch (Token.ParserException e)
+		{
+			return false;
+		}
+		return true;
+	}
+
 	public static double Solve(String equation) throws Token.ParserException
 	{
 		return (BaseSolve(Token.ParseEquation(equation), false)).result;
